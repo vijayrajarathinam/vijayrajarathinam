@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Mono:wght@200;400;500;600;700&display=swap");
+
+@layer base {
+  * {
+    @apply m-0 p-0 border-0 outline-0 box-border no-underline;
+  }
+
+  :root {
+    --color-bg: 31, 31, 56;
+    --color-bg-variant: 44, 44, 108;
+    --color-primary: 37, 150, 190;
+    --color-primary-variant: 77, 181, 255; /*, 0.4;*/
+    --color-white: 225, 225, 225;
+    /* --color-light: rgba(255, 255, 255, 0.6); */
+  }
+
+  /* prettier-ignore */
+  html { @apply scroll-smooth; }
+  /* prettier-ignore */
+  ::-webkit-scrollbar { @apply hidden; }
+
+  body {
+    @apply font-Poppins bg-tertiary text-white leading-3;
+  }
+  .container {
+    @apply w-3/4 mx-0 my-auto;
+  }
+  .Roboto {
+    @apply font-Roboto;
+  }
+
+  /* prettier-ignore */
+  h1, h2, h3, h4, h5 {
+    @apply font-medium;
+  }
+  h1 {
+    @apply text-4xl;
+  }
+
+  section {
+    @apply mt-32;
+  }
+
+  section > h2,
+  section > h5 {
+    @apply text-center text-white text-opacity-60;
+  }
+
+  section > h2 {
+    @apply text-primary mb-12;
+  }
+
+  a {
+    @apply text-primary transition-all duration-300 ease-in hover:text-white;
+  }
+
+  .btn {
+    @apply w-max inline-block text-primary py-3 px-5 rounded-lg cursor-pointer border border-primary transition-all duration-300 ease-in hover:bg-white hover:text-tertiary hover:border-transparent;
+  }
+
+  .btn-primary {
+    @apply bg-blue-400 text-white;
+  }
+
+  [type="text"],
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    @apply w-full border border-gray-300 rounded-lg shadow-sm focus:border-tertiary focus:ring-tertiary placeholder:text-xs;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    @apply rounded border-gray-300 text-tertiary focus:ring-tertiary;
+  }
+}

@@ -1,0 +1,66 @@
+.panel {
+  position: fixed;
+  z-index: 50;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 5px;
+  height: 65px;
+  width: max-content;
+  border-radius: 3rem;
+  background-color: rgba(100, 100, 100, 0.25);
+  -webkit-backdrop-filter: blur(40rem);
+  backdrop-filter: blur(40rem);
+  filter: drop-shadow(2px 1px 6px rgba(0, 0, 0, 0.5));
+  cursor: pointer;
+
+  .item {
+    --size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--set-size, var(--size));
+    height: var(--set-size, var(--size));
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    transition: all 0.1s;
+    will-change: width, height;
+
+    &:hover {
+      --set-size: calc(var(--size) * 1.25);
+    }
+
+    &.zoom {
+      --set-size: calc(var(--size) * 1.15);
+
+      &.bigger {
+        --set-size: calc(var(--size) * 1.2);
+      }
+
+      &.smaller {
+        --set-size: calc(var(--size) * 1.1);
+      }
+
+      &.smallest {
+        --set-size: calc(var(--size) * 1.05);
+      }
+    }
+
+    svg {
+      //   max-width: 100%;
+      // max-height: 90%;
+      font-size: 1.5rem;
+      transform: scale(0.8);
+    }
+  }
+}
+
+.active {
+  background: rgb(31, 31, 56);
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
