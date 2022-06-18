@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/vijayrajarathinam/static/css/main.061dcd14.css",
+    "main.js": "/vijayrajarathinam/static/js/main.0c26b147.js",
+    "static/js/988.6a25501d.chunk.js": "/vijayrajarathinam/static/js/988.6a25501d.chunk.js",
+    "index.html": "/vijayrajarathinam/index.html",
+    "main.061dcd14.css.map": "/vijayrajarathinam/static/css/main.061dcd14.css.map",
+    "main.0c26b147.js.map": "/vijayrajarathinam/static/js/main.0c26b147.js.map",
+    "988.6a25501d.chunk.js.map": "/vijayrajarathinam/static/js/988.6a25501d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.061dcd14.css",
+    "static/js/main.0c26b147.js"
+  ]
+}
